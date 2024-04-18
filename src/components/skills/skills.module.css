@@ -1,0 +1,43 @@
+.containerSkills {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    background: orange;
+}
+
+.SkillsComponent {
+    background: rgb(69, 52, 21);
+    border-radius: 70px;
+    width: 90%;
+    height: 80vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tittleSkills {
+    text-align: center;
+    font-size: 50px;
+    padding: 100px 0 50px 0;
+}
+
+.SkillsComponent span {
+    width: 80%;
+    line-height: 15px;
+    display: block;
+    color: rgb(163, 163, 163);
+}
+
+.iconSkills {
+    height: 80px;
+    width: 80px;
+}
+
+.contentSkills {
+    justify-content: space-around;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    display: flex;
+    width: 60%;
+}

@@ -5,7 +5,7 @@ import useTickText from "../../customHooks/useTickText";
 import mePhoto from "../../assets/img/mePhoto.jpg"
 
 function AboutMe() {
-    const text = useTickText(["Web developer"])
+    const text = useTickText(["Frontend Developer"])
     return (
         <section className={Style.containerAboutMe} id="Home">
             <article className={Style.tittleAboutMe}>
