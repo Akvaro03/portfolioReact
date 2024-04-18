@@ -1,0 +1,50 @@
+.containerAboutMe {
+    display: flex;
+    height: 80vh;
+}
+
+.imgAboutMe {
+    width: 640px;
+    height: 100%;
+    resize: both;
+    overflow: auto;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.imgAboutMe img {
+    width: 95%;
+    height: 70%;
+    animation: 4s ease-in-out 0s infinite alternate sun-rise;
+}
+
+.tittleAboutMe {
+    width: 60%;
+    padding: 0 120px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tittleAboutMe h3 {
+    font-size: 50px;
+}
+
+.tittleAboutMe span {
+    color: rgb(45, 45, 45);
+    line-height: 15px;
+}
+
+@keyframes sun-rise {
+    from {
+        /* pushes the sun down past the viewport */
+        transform: translateY(2vh);
+    }
+
+    to {
+        /* returns the sun to its default position */
+        transform: translateY(-10vh);
+    }
+}

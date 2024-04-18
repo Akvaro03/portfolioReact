@@ -5,24 +5,23 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 
+import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Link } from '@mui/material';
 
 
 
-const pages = ['Home', 'Skills', 'Proyects'];
+const pages = ['Home', 'Skills', 'Projects'];
 
 const icons = [<GitHubIcon />, <LinkedInIcon />]
 
 function NavigationBar() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [activeLink, setActiveLink] = React.useState("")
-
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
@@ -31,33 +30,16 @@ function NavigationBar() {
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
-    const handleClickLink = (pageActived: string) => {
+    const handleClickPage = (pageActivated: string) => {
         handleCloseNavMenu()
-        setActiveLink(pageActived)
+        setActiveLink(pageActivated)
     }
     return (
         <AppBar position="static" sx={{ background: "none", boxShadow: "none" }}>
             <Container sx={{ paddingTop: "10px", paddingBottom: "10px" }} maxWidth="lg">
                 <Toolbar disableGutters>
-                    <GitHubIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        ALVARO BALLARINI
-                    </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                    {/* Menu responsive and Links */}
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} component={"section"}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -93,17 +75,16 @@ function NavigationBar() {
                             ))}
                         </Menu>
                     </Box>
-
-
-                    <GitHubIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    {/* Tittle and Icon */}
+                    <GitHubIcon sx={{ display: 'flex', mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap
                         component="a"
-                        href="#app-bar-with-responsive-menu"
+                        href="#"
                         sx={{
                             mr: 2,
-                            display: { xs: 'flex', md: 'none' },
+                            display: 'flex',
                             flexGrow: 1,
                             fontFamily: 'monospace',
                             fontWeight: 700,
@@ -114,9 +95,11 @@ function NavigationBar() {
                     >
                         ALVARO BALLARINI
                     </Typography>
-                    <Box sx={{ flexGrow: 1, justifyContent: "end", gap: "40px", display: { xs: 'none', md: 'flex' } }}>
+
+                    {/* Links */}
+                    <Box sx={{ flexGrow: 1, justifyContent: "end", gap: "40px", display: { xs: 'none', md: 'flex' } }} component={"section"}>
                         <Box sx={{ display: "flex", gap: "50px" }}>
-                            <PagesNavigationHandle activeLink={activeLink} handleClickLink={handleClickLink} pages={pages} />
+                            <PagesNavigationHandle activeLink={activeLink} handleClickPage={handleClickPage} pages={pages} />
                         </Box>
                         <Box sx={{ display: "flex", gap: "30px" }}>
                             {icons.map((icono, key) => (
@@ -132,6 +115,7 @@ function NavigationBar() {
                             ))}
                         </Box>
                     </Box>
+
                 </Toolbar>
             </Container>
         </AppBar>
@@ -139,9 +123,9 @@ function NavigationBar() {
 }
 
 
-const PagesNavigationHandle = ({ pages, handleClickLink, activeLink }: { pages: string[], handleClickLink: (pageActived: string) => void, activeLink: string }) => (
+const PagesNavigationHandle = ({ pages, handleClickPage, activeLink }: { pages: string[], handleClickPage: (pageActived: string) => void, activeLink: string }) => (
     pages.map((page: string) => (
-        <MenuItem key={page} onClick={() => handleClickLink(page)}>
+        <MenuItem key={page} onClick={() => handleClickPage(page)}>
             <Link sx={{ color: activeLink === page ? "red" : 'white', transition: ".8s" }} underline='none' color="white" href={"#" + page} >{page}</Link>
         </MenuItem>
     ))
