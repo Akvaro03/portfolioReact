@@ -1,0 +1,18 @@
+.containerProjects {
+    color: #AEBACB;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.containerProjects h3{
+    font-size: 35px;
+}
+
+.containerCards{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

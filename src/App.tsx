@@ -1,14 +1,22 @@
 import "./App.css"
-import AboutMe from "./components/aboutMe"
-import NavigationBar from './components/navigationBar'
-import Skills from "./components/skills"
+import { lazy } from 'react'
+import SelectComponents from "./components/selectComponents";
+import Projects from "./components/projects";
+const NavigationBar = lazy(() => import('./components/navigationBar'));
+const AboutMe = lazy(() => import("./components/aboutMe"));
+const Skills = lazy(() => import("./components/skills"));
+const Experience = lazy(() => import("./components/Experience"));
 
-function App() {  
+function App() {
   return (
     <div className="App">
       <NavigationBar />
       <AboutMe />
       <Skills />
+      <SelectComponents>
+        <Projects />
+        <Experience />
+      </SelectComponents>
     </div>
   )
 }
