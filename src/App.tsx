@@ -1,7 +1,8 @@
 import "./App.css"
-import { lazy } from 'react'
+import { Suspense, lazy } from 'react'
 import SelectComponents from "./components/selectComponents";
 import Projects from "./components/projects";
+import { Skeleton } from "@mui/material";
 const NavigationBar = lazy(() => import('./components/navigationBar'));
 const AboutMe = lazy(() => import("./components/aboutMe"));
 const Skills = lazy(() => import("./components/skills"));
@@ -13,10 +14,12 @@ function App() {
       <NavigationBar />
       <AboutMe />
       <Skills />
-      <SelectComponents>
-        <Projects />
-        <Experience />
-      </SelectComponents>
+      <Suspense fallback={<Skeleton variant="rectangular" width={210} height={1200} />}>
+        <SelectComponents>
+          <Projects />
+          <Experience />
+        </SelectComponents>
+      </Suspense>
     </div>
   )
 }

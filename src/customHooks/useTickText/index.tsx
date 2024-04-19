@@ -19,7 +19,7 @@ function useTickText(arrayWords: string[]): string {
         let updatedText = isDeleting ? arrayWords[indexWords].substring(0, text.length - 1) : arrayWords[indexWords].substring(0, text.length + 1);
 
         setText(updatedText);
-        setTimeLoop(130)
+        setTimeLoop(70)
 
         if (!isDeleting && updatedText === arrayWords[indexWords]) {
             // start to deleting the letters

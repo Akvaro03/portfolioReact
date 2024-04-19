@@ -12,7 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Link } from '@mui/material';
-
+import CodeIcon from '@mui/icons-material/Code';
 
 
 const pages = ['Home', 'Skills', 'Projects'];
@@ -76,7 +76,7 @@ function NavigationBar() {
                         </Menu>
                     </Box>
                     {/* Tittle and Icon */}
-                    <GitHubIcon sx={{ display: 'flex', mr: 1 }} />
+                    <CodeIcon sx={{ display: 'flex', mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap

@@ -2,4 +2,5 @@
   width: 100%;
   background-color: orange;
   font-family: monospace;
+  overflow: hidden;
 }
