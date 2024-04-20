@@ -12,10 +12,10 @@ const SelectComponents: React.FC<Props> = ({ children }) => {
     }
 
     return (
-        <Box sx={{ background: "#000000" }}>
+        <Box sx={{ background: "#000000", height: "80vh" }}>
             <ButtonGroup sx={{ width: "100%", display: "flex", justifyContent: "center", padding: "40px 0" }} size="large" aria-label="Basic button group">
-                <Button color="warning" sx={{ transitionDuration: ".6s" }} variant={idSelect === 0 ? "contained" : "outlined"} id="0" onClick={handleClick}> Proyects</Button>
-                <Button color="warning" sx={{ transitionDuration: ".6s" }} variant={idSelect === 1 ? "contained" : "outlined"} id="1" onClick={handleClick}>Experience</Button>
+                <Button color="warning" sx={{ transitionDuration: ".6s" }} variant={idSelect === 0 ? "contained" : "outlined"} id="0" onClick={handleClick}>PRINCIPAL PROJECTS</Button>
+                <Button color="warning" sx={{ transitionDuration: ".6s" }} variant={idSelect === 1 ? "contained" : "outlined"} id="1" onClick={handleClick}>Experience and Studies</Button>
             </ButtonGroup>
             {children[idSelect]}
         </Box>
