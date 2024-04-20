@@ -126,7 +126,7 @@ function NavigationBar() {
 const PagesNavigationHandle = ({ pages, handleClickPage, activeLink }: { pages: string[], handleClickPage: (pageActived: string) => void, activeLink: string }) => (
     pages.map((page: string) => (
         <MenuItem key={page} onClick={() => handleClickPage(page)}>
-            <Link sx={{ color: activeLink === page ? "red" : 'white', transition: ".8s" }} underline='none' color="white" href={"#" + page} >{page}</Link>
+            <Link sx={{ color: activeLink === page ? "red" : 'white', transition: ".8s" }} underline='hover' color="white" href={"#" + page} >{page}</Link>
         </MenuItem>
     ))
 )
