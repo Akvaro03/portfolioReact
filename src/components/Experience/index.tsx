@@ -1,12 +1,14 @@
 import { Box, Typography } from '@mui/material';
 
+import Style from "./experience.module.css"
+
 function Experience() {
     return (
-        <Box sx={{ display: "flex", color: "white", justifyContent: "space-around" }}>
+        <Box sx={{ display: "flex", color: "white", justifyContent: "space-around", marginRight: "50px" }}>
             <Box>
-                <Typography sx={{textAlign:"center"}} variant="h3" component="span" color={"white"}>
+                <h4 className={Style.tittleCard}>
                     EXPERIENCE
-                </Typography>
+                </h4>
                 <Typography color={"white"}>Rol: Software developer in .NET and React</Typography>
                 <Typography color={"white"}>Activities:</Typography>
                 <Typography color={"white"}>👉 Creation of web pages based on React</Typography>
@@ -14,9 +16,9 @@ function Experience() {
                 <Typography color={"white"}>Duration: Sept. 2022 - Today</Typography>
             </Box>
             <Box>
-                <h3>
+                <h4 className={Style.tittleCard}>
                     STUDIES
-                </h3>
+                </h4>
             </Box>
             {/* <Timeline>
                 <TimelineItem>

@@ -1,0 +1,14 @@
+    .tittleCard {
+        font-size: 40px;
+        position: relative;
+        color: orange;
+    }
+
+    .tittleCard::before {
+        content: "";
+        border-bottom: 2px solid orange;
+        position: absolute;
+        width: 80px;
+        bottom: 0;
+        left: -100px;
+    }

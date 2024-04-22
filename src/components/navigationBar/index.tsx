@@ -13,7 +13,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Link } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
-
+import Style from "./navigationBar.module.css"
 
 const pages = ['Home', 'Skills', 'Projects'];
 
@@ -35,8 +35,8 @@ function NavigationBar() {
         setActiveLink(pageActivated)
     }
     return (
-        <AppBar position="static" sx={{ background: "none", boxShadow: "none" }}>
-            <Container sx={{ paddingTop: "10px", paddingBottom: "10px" }} maxWidth="lg">
+        <AppBar position="fixed" sx={{ background: "none", boxShadow: "none" }}>
+            <Container sx={{ paddingTop: "10px", paddingBottom: "10px" }} maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* Menu responsive and Links */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} component={"section"}>
@@ -126,7 +126,18 @@ function NavigationBar() {
 const PagesNavigationHandle = ({ pages, handleClickPage, activeLink }: { pages: string[], handleClickPage: (pageActived: string) => void, activeLink: string }) => (
     pages.map((page: string) => (
         <MenuItem key={page} onClick={() => handleClickPage(page)}>
-            <Link sx={{ color: activeLink === page ? "red" : 'white', transition: ".8s" }} underline='hover' color="white" href={"#" + page} >{page}</Link>
+            <Link
+                sx={{
+                    color: activeLink === page ? "red" : 'white',
+                    transition: ".8s",
+                    fontWeight: "500"
+                }}
+                underline='none'
+                className={Style.linkHeader}
+                color="white"
+                href={"#" + page} >
+                {page.toUpperCase()}
+            </Link>
         </MenuItem>
     ))
 )
