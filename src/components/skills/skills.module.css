@@ -2,31 +2,36 @@
     height: 90vh;
     display: flex;
     justify-content: center;
-    background: orange;
 }
 
 .SkillsComponent {
-    background: rgb(69, 52, 21);
+    background: var(--firt-color);
     border-radius: 70px;
-    width: 90%;
-    height: 80vh;
+    width: 80%;
+    height: 60vh;
     color: white;
     display: flex;
     flex-direction: column;
+    margin-top: 40px;
     align-items: center;
 }
 
 .tittleSkills {
     text-align: center;
     font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
     padding: 100px 0 50px 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
 }
 
 .SkillsComponent span {
     width: 80%;
     line-height: 15px;
     display: block;
-    color: rgb(163, 163, 163);
+    color: var(--three-color);
 }
 
 .iconSkills {

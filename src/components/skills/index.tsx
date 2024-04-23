@@ -9,7 +9,7 @@ function Skills() {
     return (
         <article className={Style.containerSkills}>
             <section className={Style.SkillsComponent}>
-                <h3 className={Style.tittleSkills}>Main Skills</h3>
+                <h3 className={Style.tittleSkills}>Skills</h3>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias id maiores necessitatibus aliquam quia ipsa, eius harum sapiente magnam ut tempore repudiandae, odit vero nam sit error? Quos, reiciendis veniam.</span>
                 <section className={Style.contentSkills}>
                     {icons.map((icon, key) => (
