@@ -1,8 +1,9 @@
-.linkHeader{
+.linkHeader {
     position: relative;
     transition: before 3s;
 }
-.linkHeader:before{
+
+.linkHeader:before {
     content: "";
     width: 100%;
     border-bottom: 1px solid white;
@@ -12,6 +13,7 @@
     transition: .5s;
     opacity: 0;
 }
+
 .linkHeader:hover:before {
     opacity: 1;
 }

@@ -1,10 +1,9 @@
 :root {
-  --firt-color: #5740A9;
+  --first-color: #5740A9;
   --second-color: #B4A3D8;
   --three-color: #CAC4C4;
   --four-color: #000000;
 }
-
 
 .App {
   width: 100%;

@@ -1,6 +1,6 @@
 .containerAboutMe {
     display: flex;
-    height: 89vh;
+    height: 100vh;
     background-image: url("../../assets/img/banner-bg.png");
 }
 
@@ -36,21 +36,25 @@
     content: "";
     width: 100%;
     position: absolute;
-    height: 89vh;
-
+    height: 100vh;
     background: linear-gradient(90deg, #000000 0%, #00000000 60%);
 }
 
 .tittleAboutMe h3 {
-    font-size: 50px;
+    font-size: 3em;
     color: white;
     height: 14%;
     padding: 5px;
 }
 
 .tittleAboutMe span {
-    color: rgb(45, 45, 45);
+    color: var(--three-color);
     line-height: 15px;
+}
+
+.buttonContactMe{
+    border-color: var(--second-color) !important;
+    color: var(--second-color) !important;
 }
 
 @keyframes sun-rise {
