@@ -48,7 +48,7 @@
 }
 
 .tittleAboutMe span {
-    color: var(--three-color);
+    color: var(--subtitle-color);
     line-height: 15px;
 }
 

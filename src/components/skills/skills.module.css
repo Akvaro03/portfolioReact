@@ -1,27 +1,23 @@
 .containerSkills {
     height: 90vh;
-    display: flex;
-    justify-content: center;
-}
-
-.SkillsComponent {
-    background: var(--firt-color);
-    border-radius: 70px;
-    width: 80%;
-    height: 60vh;
+    background: var(--first-color);
     color: white;
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
+    padding: 0px 120px;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 10px;
     align-items: center;
 }
 
-.tittleSkills {
-    text-align: center;
-    font-size: 50px;
+.containerSectionEducationSkills {
+    height: 40%;
+}
+
+.tittleSection {
+    text-align: left;
+    font-size: 40px;
     font-weight: 500;
     letter-spacing: 2px;
-    padding: 30px 0 50px 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -39,10 +35,51 @@
     width: 80px;
 }
 
-.contentSkills {
-    justify-content: space-around;
+.contentSkills,
+.contentEducation {
     padding-top: 80px;
-    padding-bottom: 30px;
-    display: flex;
+    padding-bottom: 15px;
     width: 60%;
+}
+
+.contentSkills {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    gap: 5px;
+}
+.contentSoftSkills{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.contentEducation {
+    color: var(--subtitle-color);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 20px;
+    list-style: outside;
+}
+
+li::marker {
+    color: var(--three-color);
+    font-size: 30px;
+}
+
+
+.tittleEducation {
+    font-size: 25px;
+    color: white;
+}
+
+.specialColor {
+    color: var(--three-color);
+}
+
+@media (max-width: 768px) {
+    .containerSkills {
+        grid-template-columns: 1fr;
+    }
 }

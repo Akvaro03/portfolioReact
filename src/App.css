@@ -1,8 +1,9 @@
 :root {
   --first-color: #5740A9;
-  --second-color: #B4A3D8;
-  --three-color: #CAC4C4;
+  --second-color: #ac7d54;
+  --three-color: #579bde;
   --four-color: #000000;
+  --subtitle-color: #CAC4C4;
 }
 
 .App {
