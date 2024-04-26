@@ -1,0 +1,11 @@
+.containerHistory {
+    background: var(--first-color);
+    height: 170vh;
+}
+
+.scrollAndTittle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
