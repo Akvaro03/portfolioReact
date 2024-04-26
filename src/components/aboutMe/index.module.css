@@ -1,11 +1,12 @@
 .containerAboutMe {
-    display: flex;
+    display: grid;
     height: 100vh;
+    grid-template-columns: 60% 1fr;
     background-image: url("../../assets/img/banner-bg.png");
 }
 
 .imgAboutMe {
-    width: 640px;
+    width: 70wh;
     height: 100%;
     resize: both;
     overflow: auto;
@@ -21,8 +22,7 @@
 }
 
 .tittleAboutMe {
-    width: 60%;
-    padding: 0 120px;
+    padding-left: 10%;
     gap: 15px;
     display: flex;
     flex-direction: column;
@@ -41,7 +41,7 @@
 }
 
 .tittleAboutMe h3 {
-    font-size: 3em;
+    font-size: 6vmin;
     color: white;
     height: 14%;
     padding: 5px;
@@ -49,6 +49,7 @@
 
 .tittleAboutMe span {
     color: var(--subtitle-color);
+    font-size: 2vmin;
     line-height: 15px;
 }
 
@@ -66,5 +67,14 @@
     to {
         /* returns the sun to its default position */
         transform: translateY(-10vh);
+    }
+}
+
+@media (max-width: 768px) {
+    .containerAboutMe {
+        grid-template-columns: 1fr;
+    }
+    .imgAboutMe{
+        display: none;
     }
 }

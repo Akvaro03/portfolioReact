@@ -5,11 +5,13 @@ import Javascript from "../../assets/img/javascript.svg"
 import Mongo from "../../assets/img/mongo.svg"
 import Sql from "../../assets/img/sql.svg"
 import React from "../../assets/img/react.svg"
+import { motion } from "framer-motion";
 import { Chip } from "@mui/material"
+import { ReactNode } from "react"
 function Skills() {
     return (
         <section className={Style.containerSkills}>
-            <article className={Style.containerSectionEducationSkills}>
+            <AnimationInView className={Style.containerSectionEducationSkills}>
                 <h2 className={Style.tittleSection}>Education<span className={Style.specialColor}>:</span></h2>
                 <ul className={Style.contentEducation}>
                     <li>
@@ -22,8 +24,8 @@ function Skills() {
                         <p>Curses and owr investigate</p>
                     </li>
                 </ul>
-            </article>
-            <article className={Style.containerSectionEducationSkills}>
+            </AnimationInView>
+            <AnimationInView delay={.8} className={Style.containerSectionEducationSkills}>
                 <h2 className={Style.tittleSection}>Skills<span className={Style.specialColor}>:</span></h2>
                 <div className={Style.contentSkills}>
                     {icons.map((icon, key) => (
@@ -38,7 +40,7 @@ function Skills() {
                         <Chip color="info" size="small" key={key} label={softSkill} />
                     ))}
                 </div>
-            </article>
+            </AnimationInView>
         </section>
     );
 }
@@ -52,4 +54,15 @@ const icons = [
     { name: "React", img: React }
 ]
 const softSkills = ["Flexibility", "Time Management", "Patience", "Communication"]
+const AnimationInView = ({ children, delay = .4, className }: { children: ReactNode, delay?: number, className?: string }) => (
+    <motion.article
+        className={className}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ amount: "all", once: true }}
+        transition={{
+            delay: delay,
+        }}
+    >{children}</motion.article>
+)
 export default Skills;
