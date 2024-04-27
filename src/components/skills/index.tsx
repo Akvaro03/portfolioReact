@@ -29,8 +29,8 @@ function Skills() {
                 <h2 className={Style.tittleSection}>Skills<span className={Style.specialColor}>:</span></h2>
                 <div className={Style.contentSkills}>
                     {icons.map((icon, key) => (
-                        <div>
-                            <img key={key} className={Style.iconSkills} src={icon.img} alt="Skill Icon" />
+                        <div key={key}>
+                            <img className={Style.iconSkills} src={icon.img} alt="Skill Icon" />
                             <p>{icon.name}</p>
                         </div>
                     ))}
