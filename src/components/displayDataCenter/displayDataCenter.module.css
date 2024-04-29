@@ -1,0 +1,21 @@
+.containerDataCenter {
+    display: flex;
+    flex-direction: column;
+    background-color: #111827;
+}
+ 
+.tittleData{
+    font-family: "IBM Plex Sans", sans-serif;
+    color: #F9FAFB;
+    font-weight: bold;
+    text-align: center;
+    padding: 80px 0 20px 0;
+    font-size: 7vmin;
+}
+
+.subtitleData{
+    text-align: center;
+    color: #9CA3AF;
+    font-family: "IBM Plex Sans", sans-serif;
+    padding-bottom: 40px;
+}

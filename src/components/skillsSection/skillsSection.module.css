@@ -1,0 +1,23 @@
+.containerCards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 45px;
+    justify-content: space-evenly;
+    column-gap: 30px;
+    padding-bottom: 50px;
+}
+
+.cardLanguages {
+    width: 10%;
+    position: relative;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    color: white;
+}
+
+.subtitleLanguage {
+    color: #9CA3AF;
+    text-align: center;
+    padding: 15px 0;
+}
