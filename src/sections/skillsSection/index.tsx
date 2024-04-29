@@ -10,11 +10,11 @@ import DisplayDataCenter from "../../components/displayDataCenter";
 
 function SkillsSection() {
     return (
-        <DisplayDataCenter background="#030712" tittle="Skills" subtitle="Here are some of the technologies I'm proficient in:">
+        <DisplayDataCenter id="Skills" background="#030712" tittle="Skills" subtitle="Here are some of the technologies I'm proficient in:">
             <article className={Style.containerCards}>
                 {languagesArray.map((data, key) => (
                     <div className={Style.cardLanguages} key={key}>
-                        <img src={data.img} />
+                        <img src={data.img} alt="languages icon"/>
                         <p className={Style.subtitleLanguage}>{data.name}</p>
                     </div>
                 ))}

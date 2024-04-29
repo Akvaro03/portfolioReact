@@ -15,7 +15,7 @@ import { Link } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
 import Style from "./navigationBar.module.css"
 
-const pages = ['Home', 'Skills', 'Projects'];
+const pages = ['Home', "Projects", 'Skills', 'Contact'];
 
 const icons = [<GitHubIcon />, <LinkedInIcon />]
 
@@ -125,20 +125,23 @@ function NavigationBar() {
 
 const PagesNavigationHandle = ({ pages, handleClickPage, activeLink }: { pages: string[], handleClickPage: (pageActived: string) => void, activeLink: string }) => (
     pages.map((page: string) => (
-        <MenuItem key={page} onClick={() => handleClickPage(page)}>
+        <MenuItem key={page} >
             <Link
                 sx={{
-                    color: activeLink === page ? "red" : 'white',
+                    color: activeLink === page ? "white" : '#9CA3AF',
                     transition: ".8s",
-                    fontWeight: "500"
+                    fontWeight: "500",
+                    width: "100%",
+                    height: "100%"
                 }}
+                onClick={() => handleClickPage(page)}
                 underline='none'
                 className={Style.linkHeader}
                 color="white"
                 href={"#" + page} >
                 {page.toUpperCase()}
             </Link>
-        </MenuItem>
+        </MenuItem >
     ))
 )
 

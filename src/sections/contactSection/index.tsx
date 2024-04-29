@@ -9,7 +9,7 @@ function ContactSection() {
         navigator.clipboard.writeText(email);
     }
     return (
-        <DisplayDataCenter tittle="Contact" subtitle="Have a project in mind? Let's chat! Fill out the form below and I'll get back to you as soon as possible.">
+        <DisplayDataCenter id="Contact" tittle="Contact" subtitle="Have a project in mind? Let's chat! Fill out the form below and I'll get back to you as soon as possible.">
             <article className={Style.containerContact}>
                 <span className={Style.emailField}>
                     <span>{email}</span>

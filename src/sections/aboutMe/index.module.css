@@ -40,7 +40,7 @@
     background: linear-gradient(90deg, #000000 0%, #00000000 60%);
 }
 
-.tittleAboutMe h3 {
+.tittleAboutMe h1 {
     font-size: 6vmin;
     color: white;
     height: 14%;

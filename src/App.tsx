@@ -10,7 +10,7 @@ const AboutMe = lazy(() => import("./sections/aboutMe"));
 function App() {
   return (
     <div className="App">
-      <NavigationBar />
+      <NavigationBar/>
       <AboutMe />
       <ProjectsSection />
       <SkillsSection />

@@ -16,7 +16,7 @@ function AboutMe() {
                     <Avatar src={mePhoto} sx={{ width: "150px", height: "150px" }} alt="Remy Sharp" />
                 </AnimationTranslateX>
                 <AnimationTranslateX>
-                    <h3>Hi!I'm Alvaro Ballarini {text}</h3>
+                    <h1>Hi!I'm Alvaro Ballarini {text}</h1>
                 </AnimationTranslateX>
                 <AnimationTranslateX>
                     <span>I am a software developer at Consulr Srl, a company dedicated to creating hybrid applications with .NET and web pages based on React. I love programming and innovation, and I am always looking to learn new technologies and tools to improve my projects and solutions.</span>
@@ -34,7 +34,7 @@ function AboutMe() {
                     duration: .5
                 }}
             >
-                <img src={aboutMeImage} />
+                <img src={aboutMeImage} alt="astronauts logo"/>
             </motion.article>
         </section>
     );

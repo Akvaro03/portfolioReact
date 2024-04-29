@@ -11,7 +11,7 @@ import ProjectType from "../../assets/types/projects";
 function ProjectsSection() {
     const MemoizedCardProject = memo(CardProject);
     return (
-        <DisplayDataCenter tittle="Projects" subtitle="Check out some of my recent work and the technologies I used to bring them to life.">
+        <DisplayDataCenter id="Projects" tittle="Projects" subtitle="Check out some of my recent work and the technologies I used to bring them to life.">
             <article className={Style.containerCards}>
                 {historyData.map((data, key) => (
                     <MemoizedCardProject {...data} key={key} />
@@ -45,14 +45,14 @@ const historyData: Array<ProjectType> = [
     {
         img: cryptoPage,
         description: "A crypto page for follow the principal cryptocurrencies",
-        technology: ["React", "TypeScript"],
+        technology: ["React", "TypeScript", "Vite"],
         tittle: "Crypto.com",
         url: "https:crypto-tracker-omega-two.vercel.app/"
     },
     {
         img: consultarPage,
         description: "A crypto page for follow the principal cryptocurrencies",
-        technology: ["React", "Sql", "Node"],
+        technology: ["React", "Sqlite", "Node"],
         tittle: "Crypto.com"
     }
 ]
