@@ -11,7 +11,7 @@ function ContactSection() {
     return (
         <DisplayDataCenter tittle="Contact" subtitle="Have a project in mind? Let's chat! Fill out the form below and I'll get back to you as soon as possible.">
             <article className={Style.containerContact}>
-                <p className={Style.emailField}>
+                <span className={Style.emailField}>
                     <span>{email}</span>
                     <div onClick={copyEmail} className={Style.containerIcon}>
                         <motion.div
@@ -20,7 +20,7 @@ function ContactSection() {
                             <ContentCopyIcon />
                         </motion.div>
                     </div>
-                </p>
+                </span>
             </article>
         </DisplayDataCenter>
     );

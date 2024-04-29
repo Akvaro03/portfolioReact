@@ -1,17 +1,22 @@
 .contentExperience {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-evenly;
     padding: 80px 0;
     color: var(--subtitle-color);
+    row-gap: 20px;
 }
+
 .cardExperience {
     width: 30%;
+    min-width: 250px;
     height: 20vh;
     border: 1px solid white;
     border-radius: 10px;
     background-color: #030712;
     font-family: "IBM Plex Sans", sans-serif;
+    font-size: 2.5vmin;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -19,6 +24,6 @@
     gap: 15px;
 }
 
-.cardExperience p{
+.cardExperience p {
     text-align: center;
 }
