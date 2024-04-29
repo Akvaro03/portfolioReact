@@ -15,7 +15,7 @@
 
 .subtitleData{
     text-align: center;
-    color: #9CA3AF;
+    color: var(--subtitle-color);
     font-family: "IBM Plex Sans", sans-serif;
     padding-bottom: 40px;
 }

@@ -5,7 +5,7 @@ import javascript from "../../assets/img/javascript.svg"
 import sql from "../../assets/img/sql.svg"
 import typeScript from "../../assets/img/typescript.svg"
 import Style from "./skillsSection.module.css"
-import DisplayDataCenter from "../displayDataCenter";
+import DisplayDataCenter from "../../components/displayDataCenter";
 
 
 function SkillsSection() {

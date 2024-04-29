@@ -1,11 +1,12 @@
 import Style from "./ProjectsSection.module.css"
-import cryptoPage from "../../assets/img/cryptoPage.png";
-import consultarPage from "../../assets/img/consultarPage.png";
-import ProjectType from "../../assets/types/projects";
 import { memo } from "react";
 import { motion } from "framer-motion";
 import useNewWindow from "../../customHooks/useNewWindow";
-import DisplayDataCenter from "../displayDataCenter";
+import DisplayDataCenter from "../../components/displayDataCenter";
+
+import cryptoPage from "../../assets/img/cryptoPage.png";
+import consultarPage from "../../assets/img/consultarPage.png";
+import ProjectType from "../../assets/types/projects";
 
 function ProjectsSection() {
     const MemoizedCardProject = memo(CardProject);

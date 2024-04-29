@@ -1,0 +1,38 @@
+.containerContact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+}
+
+.emailField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #898989;
+    border: 1px solid white;
+    width: 40%;
+    border-radius: 15px;
+    margin: 15px;
+    height: 40px;
+    padding-left: 15px;
+}
+
+.containerIcon {
+    color: var(--three-color);
+    border-left: 1px solid white;
+    height: 100%;
+    background-color: #030712;
+    border-radius: 0 15px 15px 0;
+    width: 15%;
+    cursor: pointer;
+}
+
+.containerIcon div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    justify-content: center;
+}

@@ -3,22 +3,11 @@
   --second-color: #ac7d54;
   --three-color: #579bde;
   --four-color: #000000;
-  --subtitle-color: #CAC4C4;
+  --subtitle-color: #9CA3AF;
 }
 
 .App {
   width: 100%;
   background-color: var(--four-color);
   font-family: monospace;
-}
-
-
-
-
-
-.newPalette{
-  --first-color: #dbd9da;
-  --second-color: #090200;
-  --three-color: #579bde;
-  --four-color: #5740A9;
 }

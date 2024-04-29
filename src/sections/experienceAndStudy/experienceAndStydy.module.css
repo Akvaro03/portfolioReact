@@ -1,0 +1,24 @@
+.contentExperience {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 80px 0;
+    color: var(--subtitle-color);
+}
+.cardExperience {
+    width: 30%;
+    height: 20vh;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #030712;
+    font-family: "IBM Plex Sans", sans-serif;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cardExperience p{
+    text-align: center;
+}

@@ -1,9 +1,11 @@
 import "./App.css"
 import { lazy } from 'react'
-import ProjectsSection from "./components/projects";
-import SkillsSection from "./components/skillsSection";
+import ProjectsSection from "./sections/projects";
+import SkillsSection from "./sections/skillsSection";
+import ContactSection from "./sections/contactSection";
+import ExperienceAndStudy from "./sections/experienceAndStudy";
 const NavigationBar = lazy(() => import('./components/navigationBar'));
-const AboutMe = lazy(() => import("./components/aboutMe"));
+const AboutMe = lazy(() => import("./sections/aboutMe"));
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <AboutMe />
       <ProjectsSection />
       <SkillsSection />
+      <ExperienceAndStudy />
+      <ContactSection />
     </div>
   )
 }
