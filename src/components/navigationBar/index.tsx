@@ -15,7 +15,7 @@ import { Link } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
 import Style from "./navigationBar.module.css"
 
-const pages = ['Home', "Projects", 'Skills', 'Contact'];
+const pages = ['Home', "Projects", 'Skills', "Experience",'Contact'];
 
 const icons = [<GitHubIcon />, <LinkedInIcon />]
 

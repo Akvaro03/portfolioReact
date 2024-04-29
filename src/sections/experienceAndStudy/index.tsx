@@ -4,7 +4,7 @@ import Style from "./experienceAndStydy.module.css"
 
 function ExperienceAndStudy() {
     return (
-        <DisplayDataCenter tittle="Work Experience and Study" subtitle="Here are some of the companies I've worked for and the roles I've held.">
+        <DisplayDataCenter id="Experience" tittle="Work Experience and Study" subtitle="Here are some of the companies I've worked for and the roles I've held.">
             <article className={Style.contentExperience}>
                 {experienceArray.map((data, key) => (
                     <CardExperience {...data} key={key} />
