@@ -1,38 +1,63 @@
 import { useRef } from "react";
 import Style from "./history.module.css"
-import { motion, useScroll, useSpring } from "framer-motion";
 import { Skeleton } from "@mui/material";
+import ProjectType from "../../assets/types/projects";
+import cryptoPage from "../../assets/img/cryptoPage.png";
+import HistoryCard from "../historyCard";
+import ScrollBarFollow from "../scrollBarFollow";
+
 
 function History() {
     const containerRef = useRef(null)
-    const { scrollYProgress } = useScroll({ target: containerRef });
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001
-    });
-
     return (
         <section ref={containerRef} className={Style.containerHistory}>
-            <motion.article
-                className={Style.scrollAndTittle}
-                initial={{ position: "static" }}
-                whileInView={{ position: "sticky", top: "9vh" }}
-                viewport={{ root: containerRef }}
-            >
-                <h2 className={Style.tittleScrollBar}>What i did?</h2>
-                <motion.div
-                    className={Style.scrollBar}
-                    style={{ scaleX }}
-                />
-            </motion.article>
-            <Skeleton height={"110vh"} />
-            <Skeleton height={"110vh"} />
-            <Skeleton height={"110vh"} />
-            <Skeleton height={"110vh"} />
-            <Skeleton height={"110vh"} />
+            <ScrollBarFollow containerRef={containerRef} Tittle="About me"/>
+            <Skeleton sx={{ width: "100%" }} height={"70vh"} />
+            {historyData.map((data, key) => (
+                <HistoryItem key={key} reverse={key % 2} {...data} />
+            ))}
         </section>
     );
 }
 
+function HistoryItem({ reverse, ...data }: ProjectType & { reverse: number }) {
+    return (
+        <>
+            <HistoryCard reverse={reverse} {...data} />
+            <Skeleton sx={{ width: "100%" }} height={"40vh"} />
+        </>
+    );
+}
+
+const historyData: Array<ProjectType> = [
+    {
+        img: cryptoPage,
+        description: "A crypto page for follow the principal cryptocurrencies",
+        technology: ["React", "TypeScript"],
+        tittle: "Crypto.com",
+        url: "https://www.google.com"
+    },
+    {
+        img: cryptoPage,
+        description: "A crypto page for follow the principal cryptocurrencies",
+        technology: ["React", "Sql", "Node"],
+        tittle: "Crypto.com",
+        url: "https://www.google.com"
+    }, {
+        img: cryptoPage,
+        description: "A crypto page for follow the principal cryptocurrencies",
+        tittle: "Crypto.com",
+        url: "https://www.google.com"
+    }, {
+        img: cryptoPage,
+        description: "A crypto page for follow the principal cryptocurrencies",
+        tittle: "Crypto.com",
+        url: "https://www.google.com"
+    }, {
+        img: cryptoPage,
+        description: "A crypto page for follow the principal cryptocurrencies",
+        tittle: "Crypto.com",
+        url: "https://www.google.com"
+    },
+]
 export default History;

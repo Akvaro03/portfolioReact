@@ -22,7 +22,7 @@ function AboutMe() {
                     <span>I am a software developer at Consulr Srl, a company dedicated to creating hybrid applications with .NET and web pages based on React. I love programming and innovation, and I am always looking to learn new technologies and tools to improve my projects and solutions.</span>
                 </AnimationTranslateX>
                 <AnimationTranslateX timing={1}>
-                    <Button className={Style.buttonContactMe}  href="mailto:alvaroballarini04@gmail.com" variant="outlined" sx={{ width: "30%", border: "solid 2px", margin: "10px 0" }}>Contact Me</Button>
+                    <Button className={Style.buttonContactMe} href="mailto:alvaroballarini04@gmail.com" variant="outlined" sx={{ width: "30%", border: "solid 2px", margin: "10px 0" }}>Contact Me</Button>
                 </AnimationTranslateX>
             </article>
             <motion.article

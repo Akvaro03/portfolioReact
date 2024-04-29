@@ -11,3 +11,14 @@
   background-color: var(--four-color);
   font-family: monospace;
 }
+
+
+
+
+
+.newPalette{
+  --first-color: #dbd9da;
+  --second-color: #090200;
+  --three-color: #579bde;
+  --four-color: #5740A9;
+}

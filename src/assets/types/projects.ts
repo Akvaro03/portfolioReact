@@ -1,9 +1,9 @@
 interface ProjectType {
-    name: string,
+    tittle: string,
     img: string,
     description: string,
-    technology: string[],
-    state: string,
-    url?: string
+    state?: string,
+    url?: string,
+    technology?: string[],
 }
 export default ProjectType

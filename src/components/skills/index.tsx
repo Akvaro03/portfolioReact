@@ -7,10 +7,13 @@ import Sql from "../../assets/img/sql.svg"
 import React from "../../assets/img/react.svg"
 import { motion } from "framer-motion";
 import { Chip } from "@mui/material"
-import { ReactNode } from "react"
+import { ReactNode, useRef } from "react"
+import ScrollBarFollow from "../scrollBarFollow"
 function Skills() {
+    const containerRef = useRef(null)
     return (
-        <section className={Style.containerSkills}>
+        <section ref={containerRef} className={Style.containerSkills}>
+            <ScrollBarFollow containerRef={containerRef} Tittle="About me" />
             <AnimationInView className={Style.containerSectionEducationSkills}>
                 <h2 className={Style.tittleSection}>Education<span className={Style.specialColor}>:</span></h2>
                 <ul className={Style.contentEducation}>
