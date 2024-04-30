@@ -11,7 +11,8 @@
     align-items: center;
     color: #898989;
     border: 1px solid white;
-    width: 40%;
+    width: 40vw;
+    min-width: 300px;
     border-radius: 15px;
     margin: 15px;
     height: 40px;
