@@ -3,17 +3,15 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 import useNewWindow from "../../customHooks/useNewWindow";
 import DisplayDataCenter from "../../components/displayDataCenter";
-
-import cryptoPage from "../../assets/img/cryptoPage.png";
-import consultarPage from "../../assets/img/consultarPage.png";
 import ProjectType from "../../assets/types/projects";
+import projectsData from "../../data/projects";
 
 function ProjectsSection() {
     const MemoizedCardProject = memo(CardProject);
     return (
         <DisplayDataCenter id="Projects" tittle="Projects" subtitle="Check out some of my recent work and the technologies I used to bring them to life.">
             <article className={Style.containerCards}>
-                {historyData.map((data, key) => (
+                {projectsData.map((data, key) => (
                     <MemoizedCardProject {...data} key={key} />
                 ))}
             </article>
@@ -41,19 +39,5 @@ function CardProject({ img, description, technology, url }: ProjectType) {
         </motion.div>
     );
 }
-const historyData: Array<ProjectType> = [
-    {
-        img: cryptoPage,
-        description: "A crypto page for follow the principal cryptocurrencies",
-        technology: ["React", "TypeScript", "Vite"],
-        tittle: "Crypto.com",
-        url: "https:crypto-tracker-omega-two.vercel.app/"
-    },
-    {
-        img: consultarPage,
-        description: "A crypto page for follow the principal cryptocurrencies",
-        technology: ["React", "Sqlite", "Node"],
-        tittle: "Crypto.com"
-    }
-]
+
 export default ProjectsSection;

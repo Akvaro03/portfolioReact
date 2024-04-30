@@ -1,6 +1,6 @@
-type languages = {
+type languagesType = {
     name:string,
     img:string
 }
 
-export default languages;
+export default languagesType;

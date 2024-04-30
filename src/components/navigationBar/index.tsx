@@ -14,10 +14,17 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Link } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
 import Style from "./navigationBar.module.css"
+import useNewWindow from '../../customHooks/useNewWindow';
 
-const pages = ['Home', "Projects", 'Skills', "Experience",'Contact'];
+const pages = ['Home', "Projects", 'Skills', "Experience", 'Contact'];
 
-const icons = [<GitHubIcon />, <LinkedInIcon />]
+const icons = [{
+    icon: <GitHubIcon />,
+    url: "https://github.com/Akvaro03"
+}, {
+    icon: <LinkedInIcon />,
+    url: "https://www.linkedin.com/in/alvaro-ballarini/"
+}]
 
 function NavigationBar() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -102,15 +109,16 @@ function NavigationBar() {
                             <PagesNavigationHandle activeLink={activeLink} handleClickPage={handleClickPage} pages={pages} />
                         </Box>
                         <Box sx={{ display: "flex", gap: "30px" }}>
-                            {icons.map((icono, key) => (
+                            {icons.map((icon, key) => (
                                 <IconButton
                                     size="large"
                                     key={key}
                                     aria-label="show more"
                                     aria-haspopup="true"
                                     color="inherit"
+                                    onClick={() => useNewWindow(icon.url)}
                                 >
-                                    {icono}
+                                    {icon.icon}
                                 </IconButton>
                             ))}
                         </Box>

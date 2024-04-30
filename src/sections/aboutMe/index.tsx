@@ -1,6 +1,6 @@
 import aboutMeImage from "../../assets/img/aboutMeImage.svg"
 import useTickText from "../../customHooks/useTickText";
-import mePhoto from "../../assets/img/mePhoto.jpg"
+import mePhoto from "../../assets/img/me.jpg"
 import { Avatar, Button } from "@mui/material";
 import Style from "./index.module.css"
 import { motion } from "framer-motion";
