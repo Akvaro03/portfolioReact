@@ -9,7 +9,7 @@ const projectsData: Array<ProjectType> = [
         description: "A crypto page for follow the principal cryptocurrencies",
         technology: ["React", "TypeScript", "Vite"],
         tittle: "Crypto.com",
-        url: "https:crypto-tracker-omega-two.vercel.app/"
+        url: "https://crypto-tracker-alvaro.vercel.app/"
     },
     {
         img: consultarPage,
